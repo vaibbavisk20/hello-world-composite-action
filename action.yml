@@ -22,23 +22,31 @@
 #     - run: goodbye1.sh
 #       shell: bash
 
-name: My Workflow
+# name: My Workflow
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  example_job:
-    runs-on: ubuntu-latest
+# jobs:
+#   example_job:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
 
-    - name: Run custom script
-      run: |
-        chmod +x ./example_script.sh
-        ./example_script.sh
+#     - name: Run custom script
+#       run: |
+#         chmod +x ./example_script.sh
+#         ./example_script.sh
 
+name: 'Print Message Action'
+description: 'An action that prints a custom message'
+author: 'Your Name'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: ./print_message.sh
