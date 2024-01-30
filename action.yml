@@ -48,5 +48,6 @@ author: 'Your Name'
 
 runs:
   using: 'composite'
+  shell: bash  # Specify the shell to be used for running the script
   steps:
     - run: ./print_message.sh
