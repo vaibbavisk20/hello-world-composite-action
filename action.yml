@@ -48,6 +48,12 @@ author: 'Your Name'
 
 runs:
   using: 'composite'
-  shell: bash  # Specify the shell to be used for running the script
   steps:
-    - run: ./print_message.sh
+    - name: Set up environment
+      shell: bash  # Specify the shell for this particular step
+      run: echo "Setting up environment"
+
+    - name: Run Print Message Action
+      shell: bash  # Specify the shell for this particular step
+      run: ./print_message.sh
+
